@@ -326,7 +326,7 @@ echo -e "\e[94m                                                  "
 echo -e "\e[94m    OpenSSH        :   "$opensshport
 echo -e "\e[94m    Dropbear       :   "$dropbearport
 echo -e "\e[94m    SSL            :   "$stunnel4port
-echo -e "\e[94m    OpenVPN        :   1194 [do not change]
+echo -e "\e[94m    OpenVPN        :   "1194 [do not change]
 echo -e "\e[94m    Port Squid     :   "$squidport
 echo -e "\e[94m    Nginx          :   "$nginxport
 echo -e "\e[94m                                                  "
