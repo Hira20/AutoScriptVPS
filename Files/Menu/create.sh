@@ -59,7 +59,7 @@ echo -e "         Port OpenSSH    :  "$opensshport
 echo -e "         Port Dropbear   :  "$dropbearport
 echo -e "         Port SSL        :  "$stunnel4port
 echo -e "         Port Squid      :  "$squidport
-echo -e "         Port OpenVPN    :  1194
+echo -e "         Port OpenVPN    :  "1194
 echo -e "              http://$MYIP/client.ovpn"
 echo -e "                                                  "
 echo -e "\e[94m[][][]======================================[][][]\e[0m"
