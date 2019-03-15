@@ -152,7 +152,7 @@ service ssh restart
 # Install Dropbear
 apt-get -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=443/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=442/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 82 -p 142"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
@@ -320,7 +320,7 @@ clear
 echo -e ""
 echo -e "\e[94m[][][]======================================[][][]"
 echo -e "\e[0m                                                   "
-echo -e "\e[94m           AutoScriptVPS by  _Dreyannz_           "
+echo -e "\e[94m           AutoScriptVPS by  Hiratechi           "
 echo -e "\e[94m                                                  "
 echo -e "\e[94m                    Services                      "
 echo -e "\e[94m                                                  "
