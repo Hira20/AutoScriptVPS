@@ -125,11 +125,16 @@ wget "https://raw.githubusercontent.com/jvb20/AutoScriptVPS/master/Files/OpenVPN
 cd
 ufw enable
 ufw status
-ufw disable
 
 # set ipv4 forward
 echo 1 > /proc/sys/net/ipv4/ip_forward
 sed -i 's|#net.ipv4.ip_forward=1|net.ipv4.ip_forward=1|' /etc/sysctl.conf
+
+# Install iptables
+cd
+iptables -t nat -I POSTROUTING -s 192.168.100.0/24 -o eth0 -j MASQUERADE
+iptables-save
+cd
 
 # Install BadVPN
 cd
@@ -331,7 +336,7 @@ echo -e "\e[94m    Port Squid     :   "$squidport
 echo -e "\e[94m    Nginx          :   "$nginxport
 echo -e "\e[94m                                                  "
 echo -e "\e[94m              Other Features Included             "
-echo -e "\e[94m                                                  "
+echo -e "\e[94m    Commands       :   menu | accounts | options | server"
 echo -e "\e[94m    Timezone       :   Asia/Manila (GMT +8)       "
 echo -e "\e[94m    Webmin         :   http://$MYIP:10000/        "
 echo -e "\e[94m    IPV6           :   [OFF]                      "
@@ -342,6 +347,6 @@ echo -e "\e[94m    LibXML Parser  :   {ON]                       "
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]\e[0m"
 echo -e "\e[0m                                                   "
-read -n1 -r -p "          Press Any Key To Show Commands After That Try menu command      "
+read -n1 -r -p "          Press Any Key To Show Continue      "
 menu
 cd
