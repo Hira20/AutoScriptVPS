@@ -49,7 +49,7 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/jvb20/AutoScriptVPS/master/Files/Nginx/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<h1><center>AutoScriptVPS by Hiratechi</center></h1><p align="center">This site was supposed to be a VPN SERVER, contact admin <a href="http://www.phcorner.net/members/446411/">here</a> to know how you can connect. Thank you!<br><br>&#169; reputation</p><script async="async" data-cfasync="false" src="//tharbadir.com/2?z=2073111"></script><script type="text/javascript" src="//dolohen.com/apu.php?zoneid=2073136"></script>" > /home/vps/public_html/index.html
+echo "<title>reputation - Hiratechi VPN</title><h1><center>AutoScriptVPS by Hiratechi</center></h1><p align="center">This site was supposed to be a VPN SERVER, contact admin <a href="http://www.phcorner.net/members/446411/">here</a> to know how you can connect. Thank you!<br><br>&#169; reputation</p><script async="async" data-cfasync="false" src="//tharbadir.com/2?z=2073111"></script><script type="text/javascript" src="//dolohen.com/apu.php?zoneid=2073136"></script>" > /home/vps/public_html/index.html
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/jvb20/AutoScriptVPS/master/Files/Nginx/vps.conf"
 service nginx restart
 
